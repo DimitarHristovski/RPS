@@ -149,48 +149,7 @@ function playAgainstPlayer() {
 // Start the game
 startGame();
 
-/*
 
-function playRound(playerSelection, computerSelection) {
-  const validInputs = ["rock", "paper", "scissors"];
-  
-  playerSelection = playerSelection.toLowerCase();
-  computerSelection = computerSelection.toLowerCase();
-  
-  if (!validInputs.includes(playerSelection) || !validInputs.includes(computerSelection)) {
-    return "Invalid input(s)!";
-  }
-  
-  if (playerSelection === computerSelection) {
-    return "It's a tie!";
-  } else if (
-    (playerSelection === "rock" && computerSelection === "scissors") ||
-    (playerSelection === "paper" && computerSelection === "rock") ||
-    (playerSelection === "scissors" && computerSelection === "paper")
-  ) {
-    return "You win! " + playerSelection + " beats " + computerSelection;
-  } else {
-    return "You lose! " + computerSelection + " beats " + playerSelection;
-  }
-}
 
-function game() {
-  let numOfPlayers = parseInt(prompt("How many players?"));
-  let playerSelections = [];
-  
-  for (let i = 1; i <= numOfPlayers; i++) {
-    let selection = prompt("Player " + i + ", please enter your selection (rock, paper, or scissors):");
-    playerSelections.push(selection);
-  }
-  
-  let computerSelection = ["rock", "paper", "scissors"][Math.floor(Math.random() * 3)];
-  
-  for (let i = 0; i < playerSelections.length; i++) {
-    let result = playRound(playerSelections[i], computerSelection);
-    console.log("Player " + (i+1) + ": " + result);
-  }
-}
 
-game();
 
-*/
