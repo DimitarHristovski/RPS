@@ -7,8 +7,8 @@ function computerPlay() {
 // Function to play a single round of Rock Paper Scissors
 function playRound(playerSelection, computerSelection) {
   const validInputs = ["rock", "paper", "scissors"];
-  playerSelection = playerSelection.toLowerCase(); //to make the inputs lowercase
-  computerSelection = computerSelection.toLowerCase();
+  playerSelection = playerSelection.toLowerCase().trim(); //to make the inputs lowercase
+  computerSelection = computerSelection.toLowerCase().trim();
   if (
     !validInputs.includes(playerSelection) || //to forbid adding other moves or random text
     !validInputs.includes(computerSelection)
