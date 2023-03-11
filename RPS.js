@@ -43,30 +43,7 @@ function startGame() {
   } else {
     console.log("Invalid choice. Please choose 1 or 2 or 3");
   }
-} /*
-function multiPlayer() {
-  let numOfPlayers = parseInt(prompt("How many players?"));
-  let playerSelections = [];
-  let colors = ["red", "green", "blue", "orange", "purple", "pink"];
-
-  for (let i = 1; i <= numOfPlayers; i++) {
-    let selection = prompt(
-      "Player " +
-        i +
-        ", please enter your selection (rock, paper, or scissors):"
-    );
-    playerSelections.push(selection);
-  }
-
-  let computerSelection = ["rock", "paper", "scissors"][
-    Math.floor(Math.random() * 3)
-  ];
-
-  for (let i = 0; i < playerSelections.length; i++) {
-    let result = playRound(playerSelections[i], computerSelection);
-    console.log("%cPlayer " + (i + 1) + ": " + result, "color:" + colors[i]);
-  }
-}*/
+}
 function multiPlayer() {
   let numOfPlayers = parseInt(prompt("How many players?"));
   let playerSelections = [];
@@ -149,7 +126,27 @@ function playAgainstPlayer() {
 // Start the game
 startGame();
 
+/* version 1
+function multiPlayer() {
+  let numOfPlayers = parseInt(prompt("How many players?"));
+  let playerSelections = [];
+  let colors = ["red", "green", "blue", "orange", "purple", "pink"];
 
+  for (let i = 1; i <= numOfPlayers; i++) {
+    let selection = prompt(
+      "Player " +
+        i +
+        ", please enter your selection (rock, paper, or scissors):"
+    );
+    playerSelections.push(selection);
+  }
 
+  let computerSelection = ["rock", "paper", "scissors"][
+    Math.floor(Math.random() * 3)
+  ];
 
-
+  for (let i = 0; i < playerSelections.length; i++) {
+    let result = playRound(playerSelections[i], computerSelection);
+    console.log("%cPlayer " + (i + 1) + ": " + result, "color:" + colors[i]);
+  }
+}*/
