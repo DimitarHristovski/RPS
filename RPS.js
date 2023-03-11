@@ -31,7 +31,7 @@ function playRound(playerSelection, computerSelection) {
 // Function to start the game
 function startGame() {
   let choice = prompt(
-    "Would you like to play against the computer (1) or against another player (2) or multiplayer (3)?"
+    "Would you like to play against the computer (1) or against another player PvP (2) or multiplayer PvE(3)?"
   );
   //we choose how we want to play the game vs player or computer by typing 1 or 2
   if (choice === "1") {
