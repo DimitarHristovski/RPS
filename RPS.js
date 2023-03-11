@@ -65,9 +65,22 @@ function multiPlayer() {
         "%cPlayer " + (i + 1) + " vs Player " + (j + 1) + ": " + result,
         "color:" + colors[i]
       );
+      if (playerSelections[i] === playerSelections[j]) {
+        console.log("Tie");
+      } else if (
+        (playerSelections[i] === "rock" &&
+          playerSelections[j] === "scissors") ||
+        (playerSelections[i] === "paper" && playerSelections[j] === "rock") ||
+        (playerSelections[i] === "scissors" && playerSelections[j] === "paper")
+      ) {
+        console.log("Player " + (i + 1) + " wins!");
+      } else {
+        console.log("Player " + (j + 1) + " wins!");
+      }
     }
   }
 }
+
 // Function to play against the computer
 function playAgainstComputer() {
   let playerScore = 0;
@@ -149,4 +162,47 @@ function multiPlayer() {
     let result = playRound(playerSelections[i], computerSelection);
     console.log("%cPlayer " + (i + 1) + ": " + result, "color:" + colors[i]);
   }
+}*/
+/*function multiPlayer() {
+  let numOfPlayers = parseInt(prompt("How many players?"));
+  let playerSelections = [];
+  let colors = ["red", "green", "blue", "orange", "purple", "pink"];
+  let playerWins = [];
+
+  for (let i = 1; i <= numOfPlayers; i++) {
+    let selection = prompt(
+      "Player " +
+        i +
+        ", please enter your selection (rock, paper, or scissors):"
+    );
+    playerSelections.push(selection);
+    playerWins.push(0);
+  }
+
+  for (let i = 0; i < playerSelections.length; i++) {
+    for (let j = i + 1; j < playerSelections.length; j++) {
+      let result = playRound(playerSelections[i], playerSelections[j]);
+      console.log(
+        "%cPlayer " + (i + 1) + " vs Player " + (j + 1) + ": " + result,
+        "color:" + colors[i]
+      );
+      if (result === "win") {
+        playerWins[i]++;
+      } else if (result === "lose") {
+        playerWins[j]++;
+      }
+    }
+  }
+
+  let highestWins = 0;
+  let winner = 0;
+
+  for (let i = 0; i < playerWins.length; i++) {
+    if (playerWins[i] > highestWins) {
+      highestWins = playerWins[i];
+      winner = i + 1;
+    }
+  }
+
+  console.log("Player " + winner + " wins with " + highestWins + " wins!");
 }*/
